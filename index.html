@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Todo List App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+       <main>
+         <div class="container">
+            <h1>Todo List</h1>
+            <p>What would you like to do Today?</p>
+            <form class="form">
+                <div class="label">
+                     <label for="todo">Add a new Todo</label>
+                </div>
+                <input type="text" placeholder="Eg. Learning JavaScript..." name="todo" id="todo" class="todo-input" title="Enter a new todo" autofocus required>
+                <button class="btn">Add Todo</button>
+            </form>
+            <ul class="todo-list"></ul>
+         </div>
+       </main>
+        <script src="script.js" async defer></script>
+    </body>
+</html>
