@@ -7,42 +7,12 @@ html{
 body{
     margin: 0 auto;
     font-family: 'Helvetica', sans-serif;
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-    padding: 0;
-    color: #1411aa;
-    min-height: 100vh;
-    line-height: 1.5;
-}
-.container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-weight: 100;
+    color: #4111aa !important;
 }
-.label{
-    margin: 2px auto;
-    font-weight: bold;
-}
-.todo-input{
-    width: 100%;
-    padding: 5px;
-    margin: 5px auto;
-    border: 3px solid #1411aa;
-    border-radius: 4px;
-}
-.btn{
-    width: 100%;
-    margin: 2px auto;
-    padding: 7px;
-    border: none;
-    background-color: lightgray;
-    border-radius: 5px;
-}
-.btn:hover{
-    background-color: #1411aa;
-    color: #ffffff;
-    font-weight: bold;
+b{
+    color: #000000;
 }
