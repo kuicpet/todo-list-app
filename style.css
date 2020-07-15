@@ -16,3 +16,43 @@ body{
 b{
     color: #000000;
 }
+.item{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+.todoInput{
+    width: 28.125rem;
+    max-width: 80%;
+    border: 3px solid #4111aa;
+}
+.todoItem{
+    width: 30rem;
+    max-width: 80%;
+    border: none;
+    background-color: transparent;
+}
+.addTodo{
+    border:3px solid #4111aa;
+    background-color: #4111aa;
+    opacity: 0.7;
+}
+.editTodo,.deleteTodo,.completeTodo{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.editTodo{
+    background-image: url("./edit-3.svg") no-repeat center center 10px;
+}
+.addTodo:hover{
+    opacity: 1;
+}
+.done{
+    text-decoration: line-through;
+    color: green;
+}
