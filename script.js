@@ -1,6 +1,8 @@
 const addButton = document.querySelector(".addTodo");
 let input = document.querySelector(".todoInput");
 const itemContainer = document.querySelector(".container");
+const clearBox = document.querySelector(".clear");
+const clearButton = document.querySelector(".clearButton");
 
 
 class todo{
@@ -17,9 +19,11 @@ class todo{
         let itemBox = document.createElement("div");
         itemBox.classList.add("item")
 
+
         let completeButton = document.createElement("button");
         completeButton.innerHTML = "<img src='/check.svg' title='Todo Complete'>";
         completeButton.classList.add("completeTodo");
+        
         
         
 
@@ -31,6 +35,7 @@ class todo{
        deleteButton.innerHTML = "<img src='/trash-2.svg' title='Delete Todo'>";
        deleteButton.classList.add("deleteTodo");
 
+       
        itemContainer.appendChild(itemBox);
 
        itemBox.appendChild(completeButton);
@@ -38,9 +43,12 @@ class todo{
        itemBox.appendChild(editButton);
        itemBox.appendChild(deleteButton);
        
+      
+
        completeButton.addEventListener('click',() => this.complete(input));
        editButton.addEventListener('click',() => this.edit(input));
        deleteButton.addEventListener('click',() => this.delete(itemBox));
+       clearButton.addEventListener('click',()=> this.delete(itemBox));
     }
 
     complete(input){
@@ -58,15 +66,21 @@ class todo{
     delete(item){
         itemContainer.removeChild(item);
     }
+   
 }
 
 function check(){
     if(input.value != ""){
         new todo(input.value.trim());
         input.value = "";
+        clearBox.classList.remove('clear');
     }
 }
 
-addButton.addEventListener('click', check,(e) => {
+addButton.addEventListener('click',(e) => {
     e.preventDefault();
+    check();
+    
 });
+
+
