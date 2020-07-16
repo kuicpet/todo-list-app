@@ -18,17 +18,17 @@ class todo{
         itemBox.classList.add("item")
 
         let completeButton = document.createElement("button");
-        completeButton.innerHTML = "<img src='/check.svg'>";
+        completeButton.innerHTML = "<img src='/check.svg' title='Todo Complete'>";
         completeButton.classList.add("completeTodo");
         
         
 
         let editButton = document.createElement("button");
-        editButton.innerHTML = "<img src='/edit-3.svg'>";
+        editButton.innerHTML = "<img src='/edit-3.svg' title='Edit Todo'>";
         editButton.classList.add("editTodo");
 
        let deleteButton = document.createElement("button");
-       deleteButton.innerHTML = "<img src='/trash-2.svg'>";
+       deleteButton.innerHTML = "<img src='/trash-2.svg' title='Delete Todo'>";
        deleteButton.classList.add("deleteTodo");
 
        itemContainer.appendChild(itemBox);
@@ -47,13 +47,13 @@ class todo{
         if(this.input = true){
             input.classList.add("done");
         } else {
-           input.classList.remove("done");
+           return
         }
         
     }
 
     edit(input){
-        input.disabled = !input.disabled
+        input.disabled = !input.disabled;
     }
     delete(item){
         itemContainer.removeChild(item);
@@ -61,10 +61,12 @@ class todo{
 }
 
 function check(){
-    if(input != ""){
+    if(input.value != ""){
         new todo(input.value.trim());
         input.value = "";
     }
 }
 
-addButton.addEventListener('click', check);
+addButton.addEventListener('click', check,(e) => {
+    e.preventDefault();
+});

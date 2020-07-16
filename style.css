@@ -46,8 +46,8 @@ b{
     background-color: transparent;
     cursor: pointer;
 }
-.editTodo{
-    background-image: url("./edit-3.svg") no-repeat center center 10px;
+.deleteTodo:hover{
+    font-weight: bold;
 }
 .addTodo:hover{
     opacity: 1;
