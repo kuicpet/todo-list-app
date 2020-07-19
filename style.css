@@ -72,3 +72,15 @@ b{
     background-color: #4111aa;
     color: #ffffff;
 }
+#delete,#edit,#check{
+    stroke: lightgray;
+}
+#delete:hover{
+    stroke: red;
+}
+#edit:hover{
+    stroke: #4111aa;
+}
+#check:hover{
+    stroke: green;
+}
