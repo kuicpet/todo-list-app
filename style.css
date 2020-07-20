@@ -12,6 +12,7 @@ body{
     align-items: center;
     justify-content: center;
     color: #4111aa !important;
+    background-color:aliceblue !important;
 }
 b{
     color: #000000;
@@ -27,6 +28,7 @@ b{
     width: 28.125rem;
     max-width: 80%;
     border: 3px solid #4111aa;
+    background-color: transparent
 }
 .todoItem{
     width: 30rem;
